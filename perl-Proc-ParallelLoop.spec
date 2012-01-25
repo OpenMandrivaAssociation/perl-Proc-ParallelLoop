@@ -1,18 +1,15 @@
-%define upstream_name    Proc-ParallelLoop
-%define upstream_version 0.5
+%define	module	Proc-ParallelLoop
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Name:		perl-%{module}
+Version:	0.5
+Release:	1
 
-Summary:    Execute loops in parallel
-License:    GPL+ or Artistic
-Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Proc/%{upstream_name}-%{upstream_version}.tgz
-
-
-BuildArch: noarch
+Summary:	Execute loops in parallel
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{module}
+Source0:	http://www.cpan.org/modules/by-module/Proc/%{module}-%{version}.tgz
+BuildArch:	noarch
 
 %description
 This module provides a way to easily write for loops and foreach loops that
@@ -23,7 +20,7 @@ each parameter in plain old sequential fashion. Return status from each
 loop iteration is also preserved.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{module}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -34,18 +31,9 @@ loop iteration is also preserved.
 %make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
-
 %files
-%defattr(-,root,root)
 %doc Changes LICENSE README
 %{_mandir}/man3/*
-%perl_vendorlib/*
-
-
-
-
+%{perl_vendorlib}/*

@@ -9,6 +9,8 @@ License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}
 Source0:	http://www.cpan.org/modules/by-module/Proc/%{module}-%{version}.tgz
+
+BuildRequires:	perl-devel
 BuildArch:	noarch
 
 %description
@@ -23,8 +25,7 @@ loop iteration is also preserved.
 %setup -q -n %{module}-%{version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-
+perl Makefile.PL INSTALLDIRS=vendor
 %make
 
 %check
@@ -37,3 +38,19 @@ loop iteration is also preserved.
 %doc Changes LICENSE README
 %{_mandir}/man3/*
 %{perl_vendorlib}/*
+
+
+%changelog
+* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.5-1
++ Revision: 768281
+- adapt to Mandriva Linux
+- imported package perl-Proc-ParallelLoop
+
+
+* Mon Apr 04 2011 jquelin <jquelin> 0.500.0-1.mga1
++ Revision: 80340
+- imported package perl-Proc-ParallelLoop
+
+
+* Mon Apr 04 2011 cpan2dist 0.5-1mga
+- initial mageia release, generated with cpan2dist

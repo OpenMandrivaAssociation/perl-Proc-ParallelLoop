@@ -2,7 +2,7 @@
 
 Name:		perl-%{module}
 Version:	0.5
-Release:	1
+Release:	2
 
 Summary:	Execute loops in parallel
 License:	GPL+ or Artistic

@@ -7,7 +7,7 @@ Release:	3
 Summary:	Execute loops in parallel
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{module}
+Url:		https://search.cpan.org/dist/%{module}
 Source0:	http://www.cpan.org/modules/by-module/Proc/%{module}-%{version}.tgz
 
 BuildRequires:	perl-devel

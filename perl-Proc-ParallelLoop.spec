@@ -10,6 +10,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{module}
 Source0:	http://www.cpan.org/modules/by-module/Proc/%{module}-%{version}.tgz
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildArch:	noarch
 
